@@ -1,0 +1,24 @@
+version: '0.1.0'
+
+index:
+  name: products-index
+  prefix: product
+  storage_type: json
+
+fields:
+  - name: name
+    type: text
+  - name: brand
+    type: text
+  - name: category
+    type: tag
+  - name: description
+    type: text
+  - name: price
+    type: numeric
+  - name: embedding
+    type: vector
+    attrs:
+      dims: 384  # ou 768, depende do modelo
+      algorithm: flat
+      distance_metric: cosine
